@@ -146,8 +146,7 @@ public class Panel extends JPanel {
     
     }
     
-    public class eHandler implements ActionListener{
-
+    public class eHandler implements ActionListener {
         @Override
         public void actionPerformed(java.awt.event.ActionEvent e) {
             if (e.getSource()==clean){
