@@ -7,17 +7,20 @@ import javax.swing.*;
 
 public class Panel extends JPanel {
     private JButton numbers[] = new JButton[10];
-    private JTextField input = new JTextField(); 
-    private JButton clean = new JButton("C");
-    private JButton plus = new JButton("+"), div = new JButton("/"), minus = new JButton("-"), mul = new JButton("*");  
-    private JButton equ = new JButton("=");
+    private JTextField input = new JTextField();
+    private JButton
+            plus = new JButton("+"),
+            div = new JButton("/"),
+            minus = new JButton("-"),
+            mul = new JButton("*");
+            clean = new JButton("C");
+            equ = new JButton("=");
     private String[] oper = {"+", "-", "*", "/", "="};
     
     eHandler handler = new eHandler();
     
-    public Panel(){
+    public Panel() {
         setLayout(null);
-        
         for (int x=0; x<3; x++){
             for (int y=0; y<3; y++){
                 numbers[x*3+y+1] = new JButton((x*3+y+1) + "");
@@ -56,7 +59,7 @@ public class Panel extends JPanel {
         equ.setBounds(130, 250 , 50 , 50);
         add(equ);
         
-        ActionListener l = new ActionListener(){
+        ActionListener l = new ActionListener() {
             @Override
             public void actionPerformed(java.awt.event.ActionEvent e) {
                 String expr = input.getText().trim();
